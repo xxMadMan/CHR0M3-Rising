@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(PlayerController))]
 public class PlayerMotor : MonoBehaviour {
 
     [SerializeField]
@@ -16,10 +17,12 @@ public class PlayerMotor : MonoBehaviour {
     private float cameraRotationLimit = 85.0f;
 
     private Rigidbody rb;
+    private PlayerController pc;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        pc = GetComponent<PlayerController>();
     }
 
     //Gets a movement vector
@@ -58,11 +61,12 @@ public class PlayerMotor : MonoBehaviour {
         if(velocity != Vector3.zero)
         {
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+
         }
 
         if (jumpSpeed != Vector3.zero)
         {
-            rb.AddForce(jumpSpeed * Time.fixedDeltaTime, ForceMode.Acceleration);
+            rb.AddForce(jumpSpeed * 10f, ForceMode.Acceleration);
         }
     }
 

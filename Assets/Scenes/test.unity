@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 671200836}
   - component: {fileID: 671200835}
   - component: {fileID: 671200834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 763345904}
   - component: {fileID: 763345903}
   - component: {fileID: 763345902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1134456606}
   - component: {fileID: 1134456605}
   - component: {fileID: 1134456604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4081701470009386, guid: 4db50464e4a6a584ba84f38232947a62, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 4081701470009386, guid: 4db50464e4a6a584ba84f38232947a62, type: 2}
       propertyPath: m_LocalPosition.z
@@ -472,6 +472,55 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114518038550231124, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: jumpSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 54653298354604176, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54653298354604176, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604583718108036, guid: 4db50464e4a6a584ba84f38232947a62, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518038550231124, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: bottom
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518038550231124, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: grounded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518038550231124, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: ground.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 54653298354604176, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54653298354604176, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 54653298354604176, guid: 4db50464e4a6a584ba84f38232947a62,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db50464e4a6a584ba84f38232947a62, type: 2}
   m_IsPrefabParent: 0
@@ -486,7 +535,7 @@ GameObject:
   - component: {fileID: 1332066098}
   - component: {fileID: 1332066097}
   - component: {fileID: 1332066096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +617,7 @@ GameObject:
   - component: {fileID: 1639387441}
   - component: {fileID: 1639387440}
   - component: {fileID: 1639387439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +699,7 @@ GameObject:
   - component: {fileID: 2049173323}
   - component: {fileID: 2049173322}
   - component: {fileID: 2049173321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

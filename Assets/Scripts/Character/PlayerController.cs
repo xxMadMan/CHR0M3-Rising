@@ -7,33 +7,31 @@ public class PlayerController : MonoBehaviour {
     private float speed = 5.0f;
     [SerializeField]
     private float lookSensitivity = 3.0f;
-
+    
     [SerializeField]
-    private float jumpSpeed = 1000f;
+    private float jumpSpeed = 20f;
 
-    bool grounded;
+    public bool grounded;
 
     private PlayerMotor motor;
 
     void Start()
     {
         motor = GetComponent<PlayerMotor>();
-        grounded = false;
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionStay(Collision col)
     {
         if (col.collider.tag == "Untagged")
         {
-            //print("On The Ground");
             grounded = true;
         }
     }
+
     void OnCollisionExit(Collision col)
     {
         if (col.collider.tag == "Untagged")
         {
-            //print("Off The Ground");
             grounded = false;
         }
     }

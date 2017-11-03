@@ -8,8 +8,13 @@ public class K_Test : MonoBehaviour {
     public float aimingDistance;
     public Transform _player;
     public float damping = 3f;
+    public Transform point;
+    public GameObject bullet;
 
     public GameObject head, body;
+
+    public float tBS = 4f;
+    float timestamp;
 
     void FixedUpdate()
     {
@@ -33,5 +38,16 @@ public class K_Test : MonoBehaviour {
     {
         Quaternion rotation = Quaternion.LookRotation(_player.position - head.transform.position);
         head.transform.rotation = Quaternion.Slerp(head.transform.rotation, rotation, Time.deltaTime * damping);
+
+        if(Time.time >= timestamp)
+        {
+            Shoot();
+            timestamp = Time.time + tBS;
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bullet, point.position, point.rotation);
     }
 }

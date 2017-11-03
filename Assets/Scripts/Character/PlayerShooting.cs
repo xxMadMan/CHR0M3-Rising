@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
 
+    public Transform point;
+    public GameObject bullet;
+    public float tBS = 4f;
+    float timestamp;
+
     // Use this for initialization
     void Start()
     {
@@ -19,5 +24,16 @@ public class PlayerShooting : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+
+        if(Input.GetButtonDown("Fire1") && Time.time >= timestamp)
+        {
+            Shoot();
+            timestamp = Time.time + tBS;
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bullet, point.position, point.rotation);
     }
 }

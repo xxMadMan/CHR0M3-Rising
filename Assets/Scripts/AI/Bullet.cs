@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
     public float timer;
     public float speed;
 
+    public string objTag;
+
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -13,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == objTag)
         {
             print("hit");
             Destroy(gameObject);

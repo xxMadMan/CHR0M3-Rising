@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 65460046670671690}
   - component: {fileID: 23728288608485424}
   m_Layer: 8
-  m_Name: TURRET
+  m_Name: TURRET01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 5
   speed: 10
+  objTag: 
 --- !u!114 &114888666185647426
 MonoBehaviour:
   m_ObjectHideFlags: 1
